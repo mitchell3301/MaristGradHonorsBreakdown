@@ -18,7 +18,11 @@ navbarPage('Marist College 2023 Graduation Honors',
                                    we uploaded the CSV into R and made it into a dataframe.'),
                         br(),
                         h4(em('Future Additions')),
-                        p('Ability to examine by degree type (BA, BS, BFA, ...)')
+                        p('Ability to examine by degree type (BA, BS, BFA, ...)'),
+                        br(),
+                        h4(em('GitHub')),
+                        a('https://github.com/mitchell3301/MaristGradHonorsBreakdown',
+                          href = 'https://github.com/mitchell3301/MaristGradHonorsBreakdown')
                       )),
              tabPanel(
                'Student Body',
