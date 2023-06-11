@@ -3,7 +3,9 @@ navbarPage('Marist College 2023 Graduation Honors',
              tabPanel('Introduction',
                       mainPanel(
                         br(),
-                        h2('Marist College Graduating Honors Analyzer'),
+                        strong(em(h2('Marist College Graduating Honors Analyzer'))),
+                        h3(strong('!!! Mobile support not great. Flip phone horizontal for best experience as 
+                                  vertical crops out some of the charts and metrics.')),
                         br(),
                         h4(em('Motivation')),
                         p('To build an application to allow for visualizations and
@@ -12,7 +14,7 @@ navbarPage('Marist College 2023 Graduation Honors',
                         br(),
                         h4(em('Design Process')),
                         p('First step was to take pictures of the commencement program
-                                   and then scan them in as images. Ran OCR (optical character recognition
+                                   and then scan them in as images. Ran OCR (optical character recognition)
                                    on the document to allow for highlighting and copying. Once we placed the data
                                    into a spreadsheet and did some minor cleaning where the OCR gave inaccurate data,
                                    we uploaded the CSV into R and made it into a dataframe.'),
@@ -57,20 +59,22 @@ navbarPage('Marist College 2023 Graduation Honors',
                  ),
                  br(),
                  fluidRow(
-                   splitLayout(cellWidths = c("45%", "45%", "45%"), 
+                   splitLayout(cellWidths = c("50%", "50%"), 
                                plotlyOutput("comm"),
-                               plotlyOutput("management"), 
+                               plotlyOutput("management"))
+                 ),
+                 fluidRow(
+                   splitLayout(cellWidths = c("50%", "50%"), 
+                               plotlyOutput("social"), 
                                plotlyOutput("liberalArts"))
                  ),
                  fluidRow(
-                   splitLayout(cellWidths = c("45%", "45%", "45%"), 
-                               plotlyOutput("social"), 
+                   splitLayout(cellWidths = c("50%", "50%"), 
                                plotlyOutput("science"),
                                plotlyOutput("compSci"))
                  )
                )
-             ),
-           )) # navbarPage
+           ))) # navbarPage
 
 
 
